@@ -17,4 +17,6 @@
 树莓派系统配置：
 本次设计使用树莓派控制，树莓派 4B 本身自带 5G 双频 WiFi 模块，能够在电脑端直接通过 VNC 远程界面连接。首先使用网线在 putty 中连接树莓派，putty
 界面中输入指令 sudo raspi-config 进入系统设置。将里面的 VNC 进行使能，便可进入 VNC 界面。如下图所示，在 VNC 界面对树莓派进行配置。我们将其中 SSH、I2C 和 Remote GPIO 使能。SSH 使能后运行树莓派更方便；I2C 可以使控制舵机的 PCA9685 芯片与主控进行通信；Remote GPIO 使能后，便可以控制树莓派的 GPIO 端口。
+
+
 <img width="295" alt="image" src="https://github.com/Yang-999-fc/A-smart-car-based-on-a-Raspberry-Pi/assets/57994308/d9ea4281-f555-4231-8156-9cba99bf1446">
