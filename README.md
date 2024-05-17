@@ -18,13 +18,16 @@
   采用的是USB免驱双目相机，将该双目相机装到舵机上，并将其USB接口接到树莓派的USB2.0端口上
 循迹模块：三路红外
   将左路信号线接入GPIO13，中路信号线接入GPIO19，右路信号线接入GPIO26。并将三路红外传感器的其他两个管脚一个接入电源接口，一个接入地。
+  
   <img width="367" alt="image" src="https://github.com/Yang-999-fc/A-smart-car-based-on-a-Raspberry-Pi/assets/57994308/611bb236-39fa-48fc-9ece-f1c11736a6ea">
-
+  
 舵机模块：TS90A舵机
   使用树莓派拓展版上的PCA9685芯片来调节PWM控制舵机
+  
   <img width="301" alt="image" src="https://github.com/Yang-999-fc/A-smart-car-based-on-a-Raspberry-Pi/assets/57994308/d374939f-5084-47fa-ba25-52350abae132">
   
   PCA9685芯片电路接线图
+  
   <img width="299" alt="image" src="https://github.com/Yang-999-fc/A-smart-car-based-on-a-Raspberry-Pi/assets/57994308/4422de5a-e957-407b-a3bc-3f308567a1a1">
 
 
@@ -40,6 +43,7 @@
   
 
 蜂鸣器：蜂鸣器连接在GPIO17端口上，一个引脚接+5V电压，一个引脚接地
+
 <img width="248" alt="image" src="https://github.com/Yang-999-fc/A-smart-car-based-on-a-Raspberry-Pi/assets/57994308/ae4b7c46-3ef6-4eed-bdf2-5016755315a6">
 
 
