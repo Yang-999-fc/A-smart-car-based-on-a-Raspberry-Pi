@@ -13,6 +13,35 @@
 项目功能介绍：
   本项目以树莓派 4B 作为主控制器，采用双目视觉传感器进行视觉检测，有效获取前方深度信息，并采用三路红外传感器进行循迹。其次，基于张氏标定法对相机进行标定；采用 Bouguet 算法对图像进行校正；采用 SGBM 算法进行立体匹配；采用五点法对障碍物距离进行精密检测，并实现小车的避障功能。同时，运用 PID 控制算法实现小车的自动循迹功能。
 
+硬件：树莓派4B+拓展版
+双目相机：HBV-1780-2 S2.0
+  采用的是USB免驱双目相机，将该双目相机装到舵机上，并将其USB接口接到树莓派的USB2.0端口上
+循迹模块：三路红外
+  将左路信号线接入GPIO13，中路信号线接入GPIO19，右路信号线接入GPIO26。并将三路红外传感器的其他两个管脚一个接入电源接口，一个接入地。
+  <img width="367" alt="image" src="https://github.com/Yang-999-fc/A-smart-car-based-on-a-Raspberry-Pi/assets/57994308/611bb236-39fa-48fc-9ece-f1c11736a6ea">
+
+舵机模块：TS90A舵机
+  使用树莓派拓展版上的PCA9685芯片来调节PWM控制舵机
+  <img width="301" alt="image" src="https://github.com/Yang-999-fc/A-smart-car-based-on-a-Raspberry-Pi/assets/57994308/d374939f-5084-47fa-ba25-52350abae132">
+  
+  PCA9685芯片电路接线图
+  <img width="299" alt="image" src="https://github.com/Yang-999-fc/A-smart-car-based-on-a-Raspberry-Pi/assets/57994308/4422de5a-e957-407b-a3bc-3f308567a1a1">
+
+
+  
+电机模块：直流减速电机
+
+电机驱动模块：电机驱动芯片TB6612FNG
+电机驱动芯片VM连接12V电源，VCC连接5V电源。AO1、AO2、BO1、BO2为电机控制输出端，PWMA、AIN1、BIN1、PWMB、AIN2、BIN2分别连接GPIO18、GPIO22、GPIO25、GPIO23、GPIO27、GPIO24作为控制信号输入端。
+
+<img width="235" alt="image" src="https://github.com/Yang-999-fc/A-smart-car-based-on-a-Raspberry-Pi/assets/57994308/46aa66bf-c246-40ed-9980-0e4c3a3fa6ed">
+<img width="257" alt="image" src="https://github.com/Yang-999-fc/A-smart-car-based-on-a-Raspberry-Pi/assets/57994308/5fed6491-0b64-4dc6-b10f-b1c15895a902">
+
+  
+
+蜂鸣器：蜂鸣器连接在GPIO17端口上，一个引脚接+5V电压，一个引脚接地
+<img width="248" alt="image" src="https://github.com/Yang-999-fc/A-smart-car-based-on-a-Raspberry-Pi/assets/57994308/ae4b7c46-3ef6-4eed-bdf2-5016755315a6">
+
 
 树莓派系统配置：
   本次设计使用树莓派控制，树莓派 4B 本身自带 5G 双频 WiFi 模块，能够在电脑端直接通过 VNC 远程界面连接。首先使用网线在 putty 中连接树莓派，putty
